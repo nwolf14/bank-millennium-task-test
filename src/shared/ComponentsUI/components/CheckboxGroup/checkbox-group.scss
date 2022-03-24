@@ -1,0 +1,10 @@
+@import '../../../../styles/colors/input/input.scss';
+@import '../../../../styles/mixins/margins.scss';
+
+.CheckboxGroup {
+  @include margins-form;
+
+  &__icon-wrapper-indeterminate-icon path {
+    fill: $--cth-checkbox-checked-icon;
+  }
+}

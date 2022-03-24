@@ -1,0 +1,174 @@
+{
+  "name": "bank-millennium-task",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/cypress": "^1.1.3",
+    "@types/enzyme": "^3.10.10",
+    "@types/i18next": "^13.0.0",
+    "@types/jest": "^26.0.15",
+    "@types/lodash": "^4.14.176",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-i18next": "^8.1.0",
+    "@types/react-redux": "^7.1.20",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/react-test-renderer": "^17.0.1",
+    "@types/redux-mock-store": "^1.0.3",
+    "@types/redux-saga-tester": "^1.0.3",
+    "axios": "^0.24.0",
+    "classnames": "^2.3.1",
+    "connected-react-router": "^6.9.2",
+    "cypress": "^9.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2",
+    "history": "^4.10.1",
+    "i18next": "^21.6.4",
+    "lodash": "^4.17.21",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-i18next": "^11.15.2",
+    "react-redux": "^7.2.6",
+    "react-router": "^5.2.1",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "react-svg": "^14.1.6",
+    "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-mock-store": "^1.5.4",
+    "redux-saga": "^1.1.3",
+    "redux-saga-tester": "^1.0.874",
+    "reselect": "^4.0.0",
+    "sass-loader": "^12.3.0",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "build-storybook": "build-storybook -s public",
+    "cypress": "cypress open",
+    "cypress:check": "cypress run",
+    "cypress:cli": "nodemon -e js,ts,tsx,scss --exec cypress run",
+    "eslint-ts": "eslint . --ext .ts --fix --max-warnings=0",
+    "eslint-tsx": "eslint . --ext .tsx --fix --max-warnings=0",
+    "jest": "react-scripts test --watchAll",
+    "jest:check": "react-scripts test --watchAll=false --passWithNoTests",
+    "jest:coverage": "react-scripts test  --colors --watchAll --coverage",
+    "prettier:check": "npx prettier --check .",
+    "prettier:write": "npx prettier --write .",
+    "prepare": "husky install",
+    "start": "react-scripts start",
+    "storybook:light": "STORYBOOK_THEME=light start-storybook -p 6006 -s public",
+    "storybook:dark": "STORYBOOK_THEME=dark start-storybook -p 6006 -s public"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "constants.ts",
+      "src/index.tsx",
+      "src/components/App",
+      "src/components/StrategyVisualBuilder",
+      "src/config",
+      "src/core/Routing/Routing.tsx",
+      "src/core/Routing/constants",
+      "src/core/Routing/guards",
+      "src/store/appInitializer/watch.ts",
+      "src/store/strategyVisualBuilder/watch.ts",
+      "src/store/configureStore.ts",
+      "src/store/reducers.ts",
+      "src/store/watchers.ts",
+      "src/stories",
+      "src/tests",
+      "stories.tsx"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
+    "@storybook/node-logger": "^6.4.9",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.4.9",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "branch-name-lint": "^2.1.1",
+    "cypress-dark": "^1.8.3",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.26.1",
+    "husky": "^7.0.4",
+    "prettier": "^2.4.1",
+    "react-test-renderer": "^17.0.2",
+    "storybook-addon-designs": "^6.2.0",
+    "storybook-dark-mode": "^1.0.8",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.21.0",
+    "typescript": "^4.4.4"
+  },
+  "branchNameLinter": {
+    "prefixes": [
+      "feature",
+      "bugfix",
+      "hotfix"
+    ],
+    "suggestions": {
+      "features": "feature",
+      "feat": "feature",
+      "fix": "hotfix",
+      "releases": "release"
+    },
+    "banned": [
+      "wip"
+    ],
+    "skip": [
+      "skip-ci"
+    ],
+    "disallowed": [
+      "master",
+      "develop",
+      "staging"
+    ],
+    "regex": "^((bugfix|feature|hotfix)/TBW-([0-9]{4})((-([a-z0-9]{1,})){1,})$)",
+    "regexOptions": "i",
+    "separator": "/",
+    "msgBranchBanned": "Branches with the name \"%s\" are not allowed.",
+    "msgBranchDisallowed": "Pushing to \"%s\" is not allowed, use git-flow.",
+    "msgPrefixNotAllowed": "Branch prefix \"%s\" is not allowed.",
+    "msgPrefixSuggestion": "Instead of \"%s\" try \"%s\".",
+    "msgseparatorRequired": "Branch \"%s\" must contain a separator \"%s\".",
+    "msgDoesNotMatchRegex": "Branch \"%s\" does not match the allowed pattern: \"%s\""
+  }
+}

@@ -1,0 +1,137 @@
+@mixin tooltip-positions-content() {
+  &--top-start {
+    bottom: calc(100% + 10px);
+    left: 0;
+  }
+
+  &--top-center {
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--top-end {
+    bottom: calc(100% + 10px);
+    right: 0;
+  }
+
+  &--bottom-start {
+    left: 0;
+    top: calc(100% + 10px);
+  }
+
+  &--bottom-center {
+    left: 50%;
+    top: calc(100% + 10px);
+    transform: translateX(-50%);
+  }
+
+  &--bottom-end {
+    right: 0;
+    top: calc(100% + 10px);
+  }
+
+  &--left-start {
+    right: calc(100% + 13px);
+    top: 0;
+  }
+
+  &--left-center {
+    right: calc(100% + 13px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--left-end {
+    bottom: 0;
+    right: calc(100% + 13px);
+  }
+
+  &--right-start {
+    left: calc(100% + 13px);
+    top: 0;
+  }
+
+  &--right-center {
+    left: calc(100% + 13px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--right-end {
+    bottom: 0;
+    left: calc(100% + 13px);
+  }
+}
+
+@mixin tooltip-positions-arrow() {
+  &--top-start {
+    bottom: -7px;
+    left: 10px;
+  }
+
+  &--top-center {
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--top-end {
+    bottom: -7px;
+    right: 10px;
+  }
+
+  &--bottom-start {
+    left: 10px;
+    top: -7px;
+    transform: rotate(180deg);
+  }
+
+  &--bottom-center {
+    left: 50%;
+    top: -7px;
+    transform: translateX(-50%) rotate(180deg);
+  }
+
+  &--bottom-end {
+    right: 10px;
+    top: -7px;
+    transform: rotate(180deg);
+  }
+
+  &--left-start {
+    right: -10px;
+    top: 10px;
+    transform: rotate(270deg);
+  }
+
+  &--left-center {
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg);
+  }
+
+  &--left-end {
+    bottom: 10px;
+    right: -10px;
+    transform: rotate(270deg);
+  }
+
+  &--right-start {
+    left: -10px;
+    top: 10px;
+    transform: rotate(90deg);
+  }
+
+  &--right-center {
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  &--right-end {
+    bottom: 10px;
+    left: -10px;
+    transform: rotate(90deg);
+  }
+}

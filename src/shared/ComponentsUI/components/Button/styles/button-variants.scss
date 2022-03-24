@@ -1,0 +1,103 @@
+@import '../../../../../styles/colors/button/button-map.scss';
+@import '../../../../../styles/lists/button.scss';
+@import '../../../../../styles/mixins/ripple-styles.scss';
+
+@mixin idle-styles($variant, $color) {
+  @if $variant == 'contained' {
+    background-color: map-get(
+      $--cth-background-color-map,
+      $variant + '-' + $color
+    );
+  } @else if $variant == 'outlined' {
+    border-color: map-get($--cth-border-map, $variant + '-' + $color);
+  }
+}
+
+@mixin hover-styles($variant, $color) {
+  @if $variant != 'outlined' {
+    background-color: map-get(
+      $--cth-background-color-map,
+      $variant + '-' + $color + '-hover'
+    );
+
+    @if $variant == 'contained' {
+      box-shadow: 0 1px 2px 0 #58585875, 0 1px 3px 1px #58585875;
+    }
+  } @else {
+    border-color: map-get(
+      $--cth-border-map,
+      $variant + '-' + $color + '-hover'
+    );
+  }
+}
+
+@mixin disabled-styles($variant, $color) {
+  @if $variant == 'contained' {
+    background-color: map-get(
+      $--cth-background-color-map,
+      $variant + '-' + $color + '-disabled'
+    );
+  } @else if $variant == 'outlined' {
+    border-color: map-get(
+      $--cth-border-map,
+      $variant + '-' + $color + '-disabled'
+    );
+  }
+}
+
+@mixin ripple-styles($variant, $color) {
+  @if $variant == 'text' {
+    @include ripple(
+      map-get($--cth-text-map, $variant + '-' + $color + '-hover')
+    );
+  } @else if $variant == 'contained' {
+    @include ripple(
+      map-get($--cth-background-color-map, $variant + '-' + $color + '-hover')
+    );
+  } @else {
+    @include ripple(
+      map-get($--cth-border-map, $variant + '-' + $color + '-hover')
+    );
+  }
+}
+
+@mixin state-styles($variant, $color: 'primary') {
+  color: map-get($--cth-text-map, $variant + '-' + $color);
+  @include idle-styles($variant, $color);
+
+  &--forced-hover,
+  &:hover:enabled {
+    color: map-get($--cth-text-map, $variant + '-' + $color + '-hover');
+    @include hover-styles($variant, $color);
+  }
+
+  &:disabled {
+    color: map-get($--cth-text-map, $variant + '-' + $color + '-disabled');
+    cursor: not-allowed;
+    @include disabled-styles($variant, $color);
+  }
+
+  &--ripple {
+    @include ripple-styles($variant, $color);
+  }
+}
+
+@mixin button-variants {
+  @each $variant in $--cth-button-variants {
+    &--#{$variant} {
+      @if $variant == 'text' or $variant == 'outlined' {
+        background: unset;
+
+        @if $variant == 'outlined' {
+          border: 1px solid;
+        }
+      }
+
+      @each $color in $--cth-button-colors {
+        &--#{$color} {
+          @include state-styles($variant, $color);
+        }
+      }
+    }
+  }
+}

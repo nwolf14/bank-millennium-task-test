@@ -1,0 +1,109 @@
+.StoryComponent {
+  font-family: PlusJakartaSans-Bold, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 64px 20px;
+  width: 100%;
+
+  &__title {
+    color: #1e2839;
+    font-size: 30px;
+    margin: 40px 0 10px;
+
+    &--dark {
+      color: #eaeef3;
+    }
+  }
+
+  &__description {
+    color: #4b4b4d;
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+      'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 16px;
+
+    & > a {
+      color: #66b2ff;
+      font-size: 13px;
+      text-decoration: underline #3399ff66;
+    }
+
+    & > code {
+      background-color: #66b2ff26;
+      border-radius: 5px;
+      color: #1a2027;
+      font-family: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono',
+        monospace;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 0 5px;
+    }
+
+    &--dark {
+      color: #aab4be;
+
+      & > code {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__content {
+    border: 1px solid #0000001f;
+    border-radius: 10px;
+    grid-column-gap: 25px;
+    justify-content: center;
+    padding: 24px;
+
+    &--flex {
+      display: flex;
+    }
+
+    &--grid {
+      display: grid;
+    }
+
+    &--top {
+      align-items: flex-start;
+    }
+
+    &--center {
+      align-items: center;
+    }
+
+    &--bottom {
+      align-items: flex-end;
+    }
+
+    &--dark {
+      border: 1px solid #ffffff1f;
+    }
+
+    &--column {
+      grid-auto-flow: column;
+    }
+
+    &--row {
+      grid-auto-flow: row;
+      grid-row-gap: 15px;
+    }
+
+    &--max-two-columns {
+      grid-row-gap: 15px;
+      grid-template-columns: repeat(2, auto);
+    }
+
+    &--max-three-columns {
+      grid-row-gap: 15px;
+      grid-template-columns: repeat(3, auto);
+    }
+
+    &--max-four-columns {
+      grid-row-gap: 15px;
+      grid-template-columns: repeat(4, auto);
+    }
+  }
+}

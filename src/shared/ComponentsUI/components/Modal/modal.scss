@@ -1,0 +1,97 @@
+@import '../../../../styles/z-indexes.scss';
+@import '../../../../styles/colors/common.scss';
+
+.Modal {
+  align-items: center;
+  background-color: #000000b3;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: 400ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  visibility: hidden;
+  width: 100%;
+  z-index: map-get($map: $--cth-z-indexes, $key: 'modal');
+
+  &--opened {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__container {
+    background-color: $--cth-background-card;
+    border-radius: 2px;
+    cursor: auto;
+    max-width: 400px;
+    opacity: 0;
+    padding: 20px;
+    transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+    &--dark {
+      background-color: $--cth-background-card-dark;
+    }
+
+    &--opened {
+      opacity: 1;
+    }
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    margin-bottom: 20px;
+  }
+
+  &__close {
+    cursor: pointer;
+
+    path {
+      fill: $--cth-neutral-1;
+    }
+
+    &--dark {
+      path {
+        fill: $--cth-neutral-1-dark;
+      }
+    }
+  }
+
+  &__footer {
+    align-items: center;
+    background-color: $--cth-background;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 -20px -20px;
+    padding: 15px;
+    position: relative;
+
+    &::before {
+      background-color: $--cth-border;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &--dark {
+      background-color: $--cth-background-dark;
+
+      &::before {
+        background-color: $--cth-border-dark;
+      }
+    }
+  }
+}

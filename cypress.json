@@ -1,0 +1,17 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "darkMediaQuery": true,
+  "ignoreTestFiles": [
+    "**/classNames.ts",
+    "**/constants.ts",
+    "**/enums.ts",
+    "**/selectors.ts"
+  ],
+  "integrationFolder": "cypress/test",
+  "pluginsFile": "cypress/plugins/index.ts",
+  "screenshotOnRunFailure": false,
+  "supportFile": "cypress/support/index.ts",
+  "video": false,
+  "viewportWidth": 1400,
+  "viewportHeight": 840
+}

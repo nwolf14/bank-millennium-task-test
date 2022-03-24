@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link matches snapshot 1`] = `
+<DocumentFragment>
+  <a
+    class=""
+    href="/"
+  >
+    Link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link matches snapshot 2`] = `
+<DocumentFragment>
+  <a
+    class="Link"
+    href="https://"
+    target="_self"
+  >
+    Link
+  </a>
+</DocumentFragment>
+`;
+
+exports[`Link matches snapshot 3`] = `
+<DocumentFragment>
+  <a
+    class="Link"
+    href=""
+    target="_blank"
+  >
+    Link
+    <span>
+      Opens in a new window
+    </span>
+  </a>
+</DocumentFragment>
+`;

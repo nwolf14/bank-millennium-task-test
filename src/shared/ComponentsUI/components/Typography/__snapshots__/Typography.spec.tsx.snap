@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography matches snapshot 1`] = `<DocumentFragment />`;
+
+exports[`Typography matches snapshot 2`] = `
+<DocumentFragment>
+  <p
+    class="Typography Typography--regular Typography--normal Typography--text"
+  >
+    Text
+  </p>
+</DocumentFragment>
+`;

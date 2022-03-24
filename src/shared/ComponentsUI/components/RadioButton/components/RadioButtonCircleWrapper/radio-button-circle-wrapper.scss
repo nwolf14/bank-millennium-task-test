@@ -1,0 +1,143 @@
+@import '../../../../../../styles/colors/input/input.scss';
+@import '../../../../../../styles/colors/common.scss';
+@import '../../../../../../styles/mixins/common.scss';
+
+$--cth-circle-outline-sizes: (
+  'small': 16px,
+  'medium': 20px,
+  'large': 24px,
+);
+
+$--cth-circle-sizes: (
+  'small': 8px,
+  'medium': 10px,
+  'large': 12px,
+);
+
+.RadioButtonCircleWrapper {
+  @include transition;
+  border-radius: 50%;
+  pointer-events: none;
+  position: relative;
+
+  &--small {
+    padding: 11px;
+  }
+
+  &--medium {
+    padding: 9px;
+  }
+
+  &--large {
+    padding: 11px;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+  }
+
+  &--hover {
+    background-color: $--cth-radio-button-unchecked-background-hover;
+
+    &--dark {
+      background-color: $--cth-radio-button-unchecked-background-hover--dark;
+    }
+
+    &--checked {
+      background-color: $--cth-radio-button-checked-background-hover;
+    }
+  }
+
+  &--focus {
+    background-color: $--cth-radio-button-unchecked-background-focus;
+
+    &--dark {
+      background-color: $--cth-radio-button-unchecked-background-focus--dark;
+    }
+
+    &--checked {
+      background-color: $--cth-radio-button-checked-background-focus;
+    }
+  }
+
+  &__circle-outline {
+    align-items: center;
+    border: 2px solid $--cth-radio-button-unchecked-border;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+
+    &--dark {
+      border: 2px solid $--cth-radio-button-unchecked-border--dark;
+    }
+
+    &--error {
+      border-color: $--cth-error;
+    }
+
+    &--checked {
+      border-color: $--cth-radio-button-checked-border;
+    }
+
+    &--small {
+      height: map-get($map: $--cth-circle-outline-sizes, $key: 'small');
+      width: map-get($map: $--cth-circle-outline-sizes, $key: 'small');
+    }
+
+    &--medium {
+      height: map-get($map: $--cth-circle-outline-sizes, $key: 'medium');
+      width: map-get($map: $--cth-circle-outline-sizes, $key: 'medium');
+    }
+
+    &--large {
+      height: map-get($map: $--cth-circle-outline-sizes, $key: 'large');
+      width: map-get($map: $--cth-circle-outline-sizes, $key: 'large');
+    }
+  }
+
+  &__circle {
+    @include transition;
+    background-color: $--cth-radio-button-unchecked-background;
+    border-radius: 50%;
+    height: 0;
+    width: 0;
+
+    &--dark {
+      background-color: $--cth-radio-button-unchecked-background--dark;
+    }
+
+    &--checked {
+      background-color: $--cth-radio-button-checked-background;
+    }
+
+    &--small {
+      height: map-get($map: $--cth-circle-sizes, $key: 'small');
+      width: map-get($map: $--cth-circle-sizes, $key: 'small');
+    }
+
+    &--medium {
+      height: map-get($map: $--cth-circle-sizes, $key: 'medium');
+      width: map-get($map: $--cth-circle-sizes, $key: 'medium');
+    }
+
+    &--large {
+      height: map-get($map: $--cth-circle-sizes, $key: 'large');
+      width: map-get($map: $--cth-circle-sizes, $key: 'large');
+    }
+  }
+
+  &__circle-pulse {
+    background-color: $--cth-radio-button-unchecked-background-click;
+
+    &--dark {
+      background-color: $--cth-radio-button-unchecked-background-click--dark;
+    }
+
+    &--checked {
+      background-color: $--cth-radio-button-checked-background-click;
+    }
+  }
+}

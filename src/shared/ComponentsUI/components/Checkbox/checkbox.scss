@@ -1,0 +1,11 @@
+@import '../../../../styles/mixins/margins.scss';
+
+.Checkbox {
+  @include margins-form;
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    position: relative;
+  }
+}

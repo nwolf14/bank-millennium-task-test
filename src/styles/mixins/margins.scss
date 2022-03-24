@@ -1,0 +1,15 @@
+@mixin margins-form {
+  &--margin-top,
+  &--margin-top-bottom {
+    margin-top: 25px;
+  }
+
+  &--margin-bottom,
+  &--margin-top-bottom {
+    margin-bottom: 25px;
+  }
+
+  &--margin-none {
+    margin: 0;
+  }
+}

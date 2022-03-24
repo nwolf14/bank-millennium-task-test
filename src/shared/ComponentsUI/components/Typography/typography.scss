@@ -1,0 +1,97 @@
+.Typography {
+  @mixin typography-styles($font-size, $line-height, $margin-bottom) {
+    display: block;
+    font-size: $font-size;
+    font-weight: 400;
+    line-height: $line-height;
+    margin: 0;
+    margin-bottom: $margin-bottom;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+    padding: 0;
+  }
+
+  @mixin heading() {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  @mixin standard() {
+    font-family: 'Rubik', sans-serif;
+  }
+
+  &--h1 {
+    @include heading;
+    @include typography-styles(96px, 96px, 35px);
+  }
+
+  &--h2 {
+    @include heading;
+    @include typography-styles(60px, 60px, 20px);
+  }
+
+  &--h3 {
+    @include heading;
+    @include typography-styles(48px, 60px, 16px);
+  }
+
+  &--h4 {
+    @include heading;
+    @include typography-styles(34px, 50px, 12px);
+  }
+
+  &--h5 {
+    @include heading;
+    @include typography-styles(24px, 28px, 8px);
+  }
+
+  &--h6 {
+    @include heading;
+    @include typography-styles(20px, 28px, 6px);
+  }
+
+  &--text {
+    @include standard;
+    @include typography-styles(16px, 20px, 4px);
+  }
+
+  &--small-text {
+    @include standard;
+    @include typography-styles(12px, 16px, 2px);
+  }
+
+  &--normal {
+    font-style: normal;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  &--light {
+    font-weight: 300;
+  }
+
+  &--regular {
+    font-weight: 400;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--semi-bold {
+    font-weight: 600;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--extra-bold {
+    font-weight: 800;
+  }
+
+  &--black {
+    font-weight: 900;
+  }
+}

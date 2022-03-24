@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form matches snapshot 1`] = `
+<DocumentFragment>
+  <form>
+    <div
+      class="TextField TextField--margin-bottom"
+    >
+      <div
+        class="TextFieldInputWrapper TextFieldInputWrapper--medium"
+      >
+        <input
+          class="TextFieldInput TextFieldInput--medium"
+          data-testid="input"
+          name="testField"
+          placeholder=""
+          style="height: 24px;"
+          type="text"
+          value=""
+        />
+        <label
+          class="TextFieldLabel TextFieldLabel--medium"
+        />
+        <div
+          class="TextFieldFilling"
+        >
+          <legend
+            class="TextFieldFilling__legend"
+          >
+             
+          </legend>
+        </div>
+      </div>
+      <div
+        class="ValidationMessage"
+      />
+    </div>
+    <button
+      class="Button Button--medium Button--contained Button--contained--primary"
+      type="submit"
+    >
+      Click
+      <span
+        class="Button--contained--primary--ripple"
+        style="left: 0px; top: 0px;"
+      />
+    </button>
+  </form>
+</DocumentFragment>
+`;

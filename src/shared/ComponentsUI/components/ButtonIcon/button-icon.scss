@@ -1,0 +1,41 @@
+@import '../../../../styles/colors/button/button.scss';
+@import '../../../../styles/mixins/button/button.scss';
+@import '../../../../styles/mixins/button/button-sizes.scss';
+
+.ButtonIcon {
+  @include button-size(true);
+  @include button;
+  background-color: unset;
+  border-radius: 50%;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+  }
+
+  &:hover:enabled {
+    background-color: $--cth-btn-icon-background-hover;
+  }
+
+  &--dark {
+    &:hover:enabled {
+      background-color: $--cth-btn-icon-background-hover--dark;
+    }
+  }
+
+  &--forced-hover {
+    background-color: $--cth-btn-icon-background-hover;
+
+    &--dark {
+      background-color: $--cth-btn-icon-background-hover--dark;
+    }
+  }
+
+  &__circle-pulse {
+    background-color: $--cth-btn-icon-background-click;
+
+    &--dark {
+      background-color: $--cth-btn-icon-background-click--dark;
+    }
+  }
+}

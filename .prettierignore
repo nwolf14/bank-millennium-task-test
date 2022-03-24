@@ -1,0 +1,4 @@
+# Ignore artifacts:
+build
+commitlint.config.js
+coverage

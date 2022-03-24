@@ -1,0 +1,68 @@
+@import '../../../../../styles/colors/button/button-map.scss';
+@import '../../../../../styles/lists/button.scss';
+
+@mixin orientation-styles($orientation, $variant, $color: 'primary') {
+  @if $variant == 'text' {
+    $--cth-border-color: map-get($--cth-border-map, 'outlined' + '-' + $color);
+
+    @if $orientation == 'horizontal' {
+      &:not(:last-of-type) {
+        border-right: 1px solid $--cth-border-color;
+      }
+    } @else {
+      &:not(:last-of-type) {
+        border-bottom: 1px solid $--cth-border-color;
+      }
+    }
+  } @else if $variant == 'contained' {
+    $--cth-border-color: map-get(
+      $--cth-background-color-map,
+      $variant + '-' + $color + '-hover'
+    );
+
+    @if $orientation == 'horizontal' {
+      &:not(:last-of-type) {
+        border-right: 1px solid $--cth-border-color;
+      }
+    } @else {
+      &:not(:last-of-type) {
+        border-bottom: 1px solid $--cth-border-color;
+      }
+    }
+
+    &--forced-hover,
+    &:hover {
+      box-shadow: unset;
+    }
+  } @else {
+    @if $orientation == 'horizontal' {
+      &:not(:last-of-type) {
+        border-right-color: transparent;
+      }
+
+      &:not(:first-of-type) {
+        margin-left: -1px;
+      }
+    } @else {
+      &:not(:last-of-type) {
+        border-bottom-color: transparent;
+      }
+
+      &:not(:first-of-type) {
+        margin-top: -1px;
+      }
+    }
+  }
+}
+
+@mixin button-group-variants($orientation: 'horizontal') {
+  @each $variant in $--cth-button-variants {
+    &--#{$variant} {
+      @each $color in $--cth-button-colors {
+        &--#{$color} {
+          @include orientation-styles($orientation, $variant, $color);
+        }
+      }
+    }
+  }
+}

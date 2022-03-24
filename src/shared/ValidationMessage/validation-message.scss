@@ -1,0 +1,30 @@
+@import '../../styles/colors/common.scss';
+@import '../../styles/colors/input/common.scss';
+
+.ValidationMessage {
+  &__helper-text {
+    color: $--cth-helper-text;
+
+    &--dark {
+      color: $--cth-helper-text--dark;
+    }
+  }
+
+  &__error-text {
+    align-items: center;
+    color: $--cth-error;
+    display: flex;
+  }
+
+  &__helper-text,
+  &__error-text {
+    font-size: 12px;
+    margin: 0;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+
+  &__error-icon {
+    margin-right: 5px;
+  }
+}

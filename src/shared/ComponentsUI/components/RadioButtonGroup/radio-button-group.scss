@@ -1,0 +1,19 @@
+@import '../../../../styles/colors/common.scss';
+@import '../../../../styles/mixins/margins.scss';
+
+.RadioButtonGroup {
+  @include margins-form;
+
+  &__label {
+    color: $--cth-label;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-left: 6px;
+
+    &--dark {
+      color: $--cth-label--dark;
+    }
+  }
+}

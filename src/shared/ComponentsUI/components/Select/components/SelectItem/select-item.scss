@@ -1,0 +1,50 @@
+@import '../../../../../../styles/colors/input/input.scss';
+@import '../../../../../../styles/mixins/ripple-styles.scss';
+
+.SelectItem {
+  align-items: center;
+  box-sizing: border-box;
+  color: $--cth-option-text;
+  cursor: pointer;
+  display: flex;
+  height: 36px;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 6px 16px;
+  position: relative;
+  width: 100%;
+
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &--ripple {
+    @include ripple($--cth-option-hover-background);
+  }
+
+  &--selected {
+    background-color: $--cth-option-selected-background;
+  }
+
+  &:hover:not(.SelectItem--selected) {
+    background-color: $--cth-option-hover-background;
+  }
+
+  &--dark {
+    color: $--cth-option-text--dark;
+
+    &--ripple {
+      @include ripple($--cth-option-hover-background--dark);
+    }
+
+    &:hover:not(.SelectItem--selected) {
+      background-color: $--cth-option-hover-background--dark;
+    }
+  }
+
+  & * {
+    pointer-events: none;
+  }
+}

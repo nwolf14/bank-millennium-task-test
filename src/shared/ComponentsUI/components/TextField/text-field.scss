@@ -1,0 +1,7 @@
+@import '../../../../styles/mixins/margins.scss';
+
+.TextField {
+  width: 200px;
+
+  @include margins-form;
+}

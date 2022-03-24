@@ -1,0 +1,55 @@
+@import '../../../../styles/colors/accordion.scss';
+
+.Accordion {
+  border-bottom: 1px solid $--cth-accordion-border;
+
+  &--dark {
+    border-color: $--cth-accordion-border-dark;
+  }
+
+  &__header {
+    align-items: center;
+    color: $--cth-accordion-text;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    min-height: 50px;
+    padding: 0 20px;
+
+    &--dark {
+      color: $--cth-accordion-text-dark;
+    }
+  }
+
+  &__arrow {
+    margin-left: 15px;
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+    path {
+      fill: $--cth-accordion-text;
+    }
+
+    &--dark {
+      path {
+        fill: $--cth-accordion-text-dark;
+      }
+    }
+
+    &--expanded {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__wrapper {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+    &--expanded {
+      margin-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+}

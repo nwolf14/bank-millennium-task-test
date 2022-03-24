@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field as Component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="TextField TextField--margin-bottom"
+  >
+    <div
+      class="TextFieldInputWrapper TextFieldInputWrapper--medium"
+    >
+      <input
+        class="TextFieldInput TextFieldInput--medium"
+        data-testid="input"
+        name="testField"
+        placeholder=""
+        style="height: 24px;"
+        type="text"
+        value=""
+      />
+      <label
+        class="TextFieldLabel TextFieldLabel--medium"
+      />
+      <div
+        class="TextFieldFilling"
+      >
+        <legend
+          class="TextFieldFilling__legend"
+        >
+           
+        </legend>
+      </div>
+    </div>
+    <div
+      class="ValidationMessage"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Field as boolean type matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Checkbox Checkbox--margin-bottom"
+  >
+    <div
+      class="Checkbox__wrapper"
+    >
+      <input
+        class="CheckboxInput CheckboxInput--medium"
+        data-testid="input"
+        type="checkbox"
+      />
+      <div
+        class="CheckboxIconWrapper CheckboxIconWrapper--medium"
+      >
+        <svg
+          class="CheckboxIconWrapper__unchecked-icon"
+        >
+          uncheck.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      class="ValidationMessage"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Field as children matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="TextField TextField--margin-bottom"
+  >
+    <div
+      class="TextFieldInputWrapper TextFieldInputWrapper--medium"
+    >
+      <input
+        class="TextFieldInput TextFieldInput--medium"
+        data-testid="input"
+        name=""
+        placeholder=""
+        style="height: 24px;"
+        type="text"
+        value=""
+      />
+      <label
+        class="TextFieldLabel TextFieldLabel--medium"
+      />
+      <div
+        class="TextFieldFilling"
+      >
+        <legend
+          class="TextFieldFilling__legend"
+        >
+           
+        </legend>
+      </div>
+    </div>
+    <div
+      class="ValidationMessage"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Field as null matches snapshot 1`] = `<DocumentFragment />`;
+
+exports[`Field as number type matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="TextField TextField--margin-bottom"
+  >
+    <div
+      class="TextFieldInputWrapper TextFieldInputWrapper--medium"
+    >
+      <input
+        class="TextFieldInput TextFieldInput--medium"
+        data-testid="input"
+        name="testField"
+        placeholder=""
+        style="height: 24px;"
+        type="number"
+        value=""
+      />
+      <label
+        class="TextFieldLabel TextFieldLabel--placement-top TextFieldLabel--medium"
+      />
+      <div
+        class="TextFieldFilling"
+      >
+        <legend
+          class="TextFieldFilling__legend TextFieldFilling__legend--focus"
+        >
+           
+        </legend>
+      </div>
+    </div>
+    <div
+      class="ValidationMessage"
+    />
+  </div>
+</DocumentFragment>
+`;

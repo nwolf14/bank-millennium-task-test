@@ -1,0 +1,23 @@
+.TextFieldInputWrapper {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+
+  &:hover {
+    cursor: text;
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+  }
+
+  &--small {
+    min-height: 40px;
+    padding: 10px 14px;
+  }
+
+  &--medium {
+    min-height: 56px;
+    padding: 16px 14px;
+  }
+}

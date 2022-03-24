@@ -1,0 +1,50 @@
+@import '../../../../styles/colors/common.scss';
+@import '../../../../styles/colors/input/input.scss';
+@import '../../../../styles/mixins/margins.scss';
+
+.Switch {
+  @include margins-form;
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+  }
+
+  &__input-wrapper {
+    background-color: $--cth-switch-off-background;
+    border: 1px solid $--cth-switch-off-border;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+    &--checked {
+      background-color: $--cth-switch-on-background;
+      border-color: $--cth-switch-on-border;
+    }
+
+    &--disabled {
+      background-color: $--cth-switch-background-disabled;
+      border-color: $--cth-switch-border-disabled;
+      cursor: default;
+    }
+
+    &--small {
+      border-radius: 7.5px;
+      height: 15px;
+      width: 30px;
+    }
+
+    &--medium {
+      border-radius: 15px;
+      height: 30px;
+      width: 60px;
+    }
+
+    &--error {
+      background-color: $--cth-error;
+      border-color: $--cth-error;
+    }
+  }
+}

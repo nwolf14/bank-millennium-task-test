@@ -1,0 +1,48 @@
+@import '../../../../../../styles/colors/input/common.scss';
+
+.TextFieldInput {
+  background-color: unset;
+  border: none;
+  box-sizing: border-box;
+  color: $--cth-input-text;
+  height: 100%;
+  outline: unset;
+  overflow-y: auto;
+  padding: 0;
+  position: relative;
+  resize: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+
+  &:disabled {
+    color: $--cth-input-disabled;
+    cursor: not-allowed;
+  }
+
+  &--dark {
+    color: $--cth-input-text--dark;
+
+    &:disabled {
+      color: $--cth-input-disabled--dark;
+    }
+  }
+
+  &--small {
+    font-size: 14px;
+  }
+
+  &--medium {
+    font-size: 16px;
+  }
+
+  &__multiline {
+    &--small {
+      line-height: 20px;
+    }
+
+    &--medium {
+      line-height: 22px;
+    }
+  }
+}

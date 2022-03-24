@@ -1,0 +1,21 @@
+@import '../../../../../../styles/colors/common.scss';
+
+.CheckboxLabel {
+  color: $--cth-label;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0;
+  margin-left: 6px;
+
+  &--dark {
+    color: $--cth-label--dark;
+  }
+
+  &--disabled {
+    color: $--cth-label-disabled;
+
+    &--dark {
+      color: $--cth-label-disabled--dark;
+    }
+  }
+}

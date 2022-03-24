@@ -1,0 +1,32 @@
+@import '../../../../../../styles/colors/input/input.scss';
+
+.SwitchHandler {
+  background-color: $--cth-switch-handler-background;
+  border: 1px solid $--cth-switch-off-border;
+  border-radius: 50%;
+  box-sizing: border-box;
+  left: -1px;
+  pointer-events: none;
+  position: absolute;
+  top: -1px;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  &--checked {
+    transform: translateX(100%);
+  }
+
+  &--disabled {
+    background-color: $--cth-switch-handler-background-disabled;
+  }
+
+  &--small {
+    height: 15px;
+    width: 15px;
+  }
+
+  &--medium {
+    height: 30px;
+    width: 30px;
+  }
+}

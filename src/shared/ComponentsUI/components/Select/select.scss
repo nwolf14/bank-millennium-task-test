@@ -1,0 +1,65 @@
+@import '../../../../styles/colors/common.scss';
+@import '../../../../styles/colors/input/input.scss';
+@import '../../../../styles/mixins/margins.scss';
+
+.Select {
+  position: relative;
+
+  @include margins-form;
+
+  &__text-field {
+    &__input {
+      cursor: pointer;
+
+      &--error:focus ~ svg path {
+        fill: $--cth-error-focus;
+      }
+    }
+
+    &__wrapper {
+      padding-right: 26px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__chevron {
+    position: absolute;
+    right: 10px;
+    transition: 250ms ease-in;
+    user-select: none;
+
+    &--disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    &--selected {
+      transform: rotate(180deg);
+    }
+
+    &--small {
+      top: 17px;
+    }
+
+    &--medium {
+      top: 25px;
+    }
+
+    & > path {
+      fill: $--cth-option-chevron;
+    }
+
+    &--dark {
+      & > path {
+        fill: $--cth-option-chevron--dark;
+      }
+    }
+
+    &--error > path {
+      fill: $--cth-error;
+    }
+  }
+}

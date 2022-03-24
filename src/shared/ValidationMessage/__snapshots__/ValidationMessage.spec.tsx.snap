@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ValidationMessage matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ValidationMessage"
+  />
+</DocumentFragment>
+`;
+
+exports[`ValidationMessage matches snapshot 2`] = `
+<DocumentFragment>
+  <div
+    class="ValidationMessage"
+  >
+    <div
+      class="ValidationMessage__error-text"
+    >
+      <svg
+        class="ValidationMessage__error-icon"
+      >
+        error.svg
+      </svg>
+      error
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ValidationMessage matches snapshot 3`] = `
+<DocumentFragment>
+  <div
+    class="ValidationMessage"
+  >
+    <p
+      class="ValidationMessage__helper-text"
+    >
+      helperText
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ValidationMessage matches snapshot 4`] = `
+<DocumentFragment>
+  <div
+    class="ValidationMessage"
+  >
+    <div
+      class="ValidationMessage__error-text"
+    >
+      <svg
+        class="ValidationMessage__error-icon"
+      >
+        error.svg
+      </svg>
+      error
+    </div>
+  </div>
+</DocumentFragment>
+`;

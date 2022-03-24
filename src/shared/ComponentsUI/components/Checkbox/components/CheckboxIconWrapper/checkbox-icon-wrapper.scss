@@ -1,0 +1,104 @@
+@import '../../../../../../styles/colors/common.scss';
+@import '../../../../../../styles/colors/input/input.scss';
+@import '../../../../../../styles/mixins/common.scss';
+
+$--cth-icon-sizes: (
+  'small': 16px,
+  'medium': 20px,
+  'large': 24px,
+);
+
+.CheckboxIconWrapper {
+  @include transition;
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  position: relative;
+
+  &--small {
+    height: map-get($map: $--cth-icon-sizes, $key: 'small');
+    padding: 11px;
+    width: map-get($map: $--cth-icon-sizes, $key: 'small');
+  }
+
+  &--medium {
+    height: map-get($map: $--cth-icon-sizes, $key: 'medium');
+    padding: 11px;
+    width: map-get($map: $--cth-icon-sizes, $key: 'medium');
+  }
+
+  &--large {
+    height: map-get($map: $--cth-icon-sizes, $key: 'large');
+    padding: 11px;
+    width: map-get($map: $--cth-icon-sizes, $key: 'large');
+  }
+
+  &--hover {
+    background-color: $--cth-checkbox-unchecked-background-hover;
+
+    &--dark {
+      background-color: $--cth-checkbox-unchecked-background-hover--dark;
+    }
+
+    &--checked {
+      background-color: $--cth-checkbox-checked-background-hover;
+    }
+  }
+
+  &--focus {
+    background-color: $--cth-checkbox-unchecked-background-focus;
+
+    &--dark {
+      background-color: $--cth-checkbox-unchecked-background-focus--dark;
+    }
+
+    &--checked {
+      background-color: $--cth-checkbox-checked-background-focus;
+    }
+  }
+
+  &__unchecked-icon path {
+    fill: $--cth-checkbox-unchecked-icon;
+  }
+
+  &__unchecked-icon--dark path {
+    fill: $--cth-checkbox-unchecked-icon--dark;
+  }
+
+  &__unchecked-icon--error path {
+    fill: $--cth-error;
+  }
+
+  &__checked-icon path {
+    fill: $--cth-checkbox-checked-icon;
+  }
+
+  &__unchecked-icon,
+  &__checked-icon {
+    height: 100%;
+    width: 100%;
+
+    & svg {
+      height: 100%;
+      width: 100%;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__circle-pulse {
+    background-color: $--cth-checkbox-unchecked-background-click;
+
+    &--dark {
+      background-color: $--cth-checkbox-unchecked-background-click--dark;
+    }
+
+    &--checked {
+      background-color: $--cth-checkbox-checked-background-click;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import '../../../../../../styles/colors/common.scss';
+
+.RadioButtonLabel {
+  color: $--cth-label;
+  cursor: pointer;
+  margin: 0;
+
+  &--dark {
+    color: $--cth-label--dark;
+  }
+
+  &--small {
+    font-size: 14px;
+    margin-left: 9px;
+  }
+
+  &--medium {
+    font-size: 16px;
+    margin-left: 6px;
+  }
+
+  &--large {
+    font-size: 18px;
+    margin-left: 3px;
+  }
+
+  &--disabled {
+    color: $--cth-label-disabled;
+    cursor: not-allowed;
+
+    &--dark {
+      color: $--cth-label-disabled--dark;
+    }
+  }
+}

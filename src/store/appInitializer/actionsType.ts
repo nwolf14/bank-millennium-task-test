@@ -1,0 +1,5 @@
+export const REDUCER_KEY = 'appInitializer';
+
+export const APP_INIT = `${REDUCER_KEY}/APP_INIT`;
+export const SET_IS_APP_LOADED = `${REDUCER_KEY}/SET_IS_APP_LOADED`;
+export const SET_IS_TRANSLATION_LOADED = `${REDUCER_KEY}/SET_IS_TRANSLATION_LOADED`;
